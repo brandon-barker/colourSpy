@@ -1,17 +1,114 @@
 <!doctype html>
 <style type="text/css">
-	#mainPopup {
-		padding: 10px;
-		height: 200px;
-		width: 400px;
+	#main {
+		padding: 0px 8px 0px 2px;
+		height: auto;
+    max-height: 500px;
+		width: 250px;
 		font-family: Helvetica, Ubuntu, Arial, sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
 	}
+
 	h1 {
 		font-size: 2em;
 	}
+
+  .brand {
+    font-size: 1.05em;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .card {
+    border: 1px solid #c4c7ca;
+    border-bottom: 3px solid #a2a5a8;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 99%;
+    height: 65px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .card-content {
+    padding: 2px;
+  }
+
+  .card-content > .swatch {
+    min-width: inherit;
+    min-height: 40px;
+    display: inline-block;
+  }
+
+  .card-content > .swatch {
+    content: "";
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-footer {
+    padding: 2px;
+    font-size: 0.75em;
+    color: #5c5c5c;
+    font-weight: bold;
+  }
 </style>
 
-<div id="mainPopup">
-<h1>Hello extensionizr!</h1>
-<p>To shut this popup down, edit the manifest file and remove the "default popup" key. To edit it, just edit ext/browser_action/browser_action.html. The CSS is there, too.</p>
+<div id="main">
+  <p class="brand">colourSpy</p>
+
+  <div class="card">
+    <div class="card-content">
+      <span class="swatch" style="background-color: #28776a">&nbsp;</span>
+    </div>
+    <div class="card-footer">
+      #28776a
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <span class="swatch" style="background-color: #2047AE">&nbsp;</span>
+    </div>
+    <div class="card-footer">
+      #2047AE
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <span class="swatch" style="background-color: #5468FF">&nbsp;</span>
+    </div>
+    <div class="card-footer">
+      #5468FF
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <span class="swatch" style="background-color: #4A8813">&nbsp;</span>
+    </div>
+    <div class="card-footer">
+      #4A8813
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <span class="swatch" style="background-color: #EC843F">&nbsp;</span>
+    </div>
+    <div class="card-footer">
+      #EC843F
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <span class="swatch" style="background-color: #28776a">&nbsp;</span>
+    </div>
+    <div class="card-footer">
+      #28776a
+    </div>
+  </div>
 </div>
