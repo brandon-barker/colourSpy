@@ -1,43 +1,49 @@
 <!doctype html>
 <style type="text/css">
-	#main {
-		padding: 0px 8px 0px 2px;
-		height: auto;
-    max-height: 500px;
-		width: 250px;
-		font-family: Helvetica, Ubuntu, Arial, sans-serif;
+  body {
+    height: auto;
+    max-height: 600px;
+    width: 350px;
+    font-family: Helvetica, Ubuntu, Arial, sans-serif;
     overflow-x: hidden;
     overflow-y: auto;
-	}
+    margin: 0px 0px 12px 0px;
+    padding: 0;
+    background-color: #eeeeee;
+  }
 
-	h1 {
-		font-size: 2em;
-	}
+  #main {
+    padding: 0px 8px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
 
   .brand {
     font-size: 1.05em;
     font-weight: bold;
-    margin: 0;
+    margin: 2px 0px;
   }
 
   .card {
     border: 1px solid #c4c7ca;
-    border-bottom: 3px solid #a2a5a8;
+    border-bottom: 2px solid #a2a5a8;
     border-radius: 2px;
     background-color: #fff;
     width: 99%;
-    height: 65px;
+    height: 80px;
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 12px;
   }
 
   .card-content {
-    padding: 2px;
+    padding: 4px;
   }
 
   .card-content > .swatch {
     min-width: inherit;
-    min-height: 40px;
+    min-height: 45px;
     display: inline-block;
   }
 
@@ -48,16 +54,28 @@
   }
 
   .card-footer {
-    padding: 2px;
+    padding: 6px 4px;
     font-size: 0.75em;
     color: #5c5c5c;
     font-weight: bold;
   }
+
+  .header {
+    height: 25px;
+    width: 100%;
+    min-width: 100%;
+    border-bottom: 1px solid #c4c7ca;
+    padding: 4px 0px 2px 4px;
+    background-color: #e6e6e6;
+  }
 </style>
 
-<div id="main">
-  <p class="brand">colourSpy</p>
+<body>
+  <div class="header">
+    <p class="brand">colourSpy</p>
+  </div>
 
+<div id="main">
   <div class="card">
     <div class="card-content">
       <span class="swatch" style="background-color: #28776a">&nbsp;</span>
@@ -102,13 +120,5 @@
       #EC843F
     </div>
   </div>
-
-  <div class="card">
-    <div class="card-content">
-      <span class="swatch" style="background-color: #28776a">&nbsp;</span>
-    </div>
-    <div class="card-footer">
-      #28776a
-    </div>
-  </div>
 </div>
+</body>
