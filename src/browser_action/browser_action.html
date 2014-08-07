@@ -1,124 +1,98 @@
 <!doctype html>
-<style type="text/css">
-  body {
-    height: auto;
-    max-height: 600px;
-    width: 350px;
-    font-family: Helvetica, Ubuntu, Arial, sans-serif;
-    overflow-x: hidden;
-    overflow-y: auto;
-    margin: 0px 0px 12px 0px;
-    padding: 0;
-    background-color: #eeeeee;
-  }
+<html ng-app="colourSpy" ng-csp>
+<head>
+  <script type="text/javascript" src="../../js/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="../../js/angular/angular.min.js"></script>
+  <script type="text/javascript" src="../js/controllers/MainCtrl.js"></script>
+  <script type="text/javascript" src="../js/app.js"></script>
+  <script type="text/javascript" src="../js/main.js"></script>
+  <style type="text/css">
+    body {
+      height: auto;
+      max-height: 600px;
+      width: 350px;
+      font-family: Helvetica, Ubuntu, Arial, sans-serif;
+      overflow-x: hidden;
+      overflow-y: auto;
+      margin: 0px 0px 12px 0px;
+      padding: 0;
+      background-color: #eeeeee;
+    }
 
-  #main {
-    padding: 0px 8px;
-  }
+    #main {
+      padding: 0px 8px;
+    }
 
-  h1 {
-    font-size: 2em;
-  }
+    h1 {
+      font-size: 2em;
+    }
 
-  .brand {
-    font-size: 1.05em;
-    font-weight: bold;
-    margin: 2px 0px;
-  }
+    .brand {
+      font-size: 1.05em;
+      font-weight: bold;
+      margin: 2px 0px 0px 6px;
+      color: #5d6063;
+    }
 
-  .card {
-    border: 1px solid #c4c7ca;
-    border-bottom: 2px solid #a2a5a8;
-    border-radius: 2px;
-    background-color: #fff;
-    width: 99%;
-    height: 80px;
-    display: inline-block;
-    margin-top: 12px;
-  }
+    .card {
+      border: 1px solid #c4c7ca;
+      border-bottom: 2px solid #a2a5a8;
+      border-radius: 2px;
+      background-color: #fff;
+      width: 99%;
+      height: 80px;
+      display: inline-block;
+      margin-top: 12px;
+    }
 
-  .card-content {
-    padding: 4px;
-  }
+    .card-content {
+      padding: 4px;
+    }
 
-  .card-content > .swatch {
-    min-width: inherit;
-    min-height: 45px;
-    display: inline-block;
-  }
+    .card-content > .swatch {
+      min-width: inherit;
+      min-height: 45px;
+      display: inline-block;
+    }
 
-  .card-content > .swatch {
-    content: "";
-    width: 100%;
-    height: 100%;
-  }
+    .card-content > .swatch {
+      content: "";
+      width: 100%;
+      height: 100%;
+    }
 
-  .card-footer {
-    padding: 6px 4px;
-    font-size: 0.75em;
-    color: #5c5c5c;
-    font-weight: bold;
-  }
+    .card-footer {
+      padding: 6px 4px;
+      font-size: 0.75em;
+      color: #5c5c5c;
+      font-weight: bold;
+    }
 
-  .header {
-    height: 25px;
-    width: 100%;
-    min-width: 100%;
-    border-bottom: 1px solid #c4c7ca;
-    padding: 4px 0px 2px 4px;
-    background-color: #e6e6e6;
-  }
-</style>
+    .header {
+      height: 25px;
+      width: 100%;
+      min-width: 100%;
+      border-bottom: 1px solid #c4c7ca;
+      padding: 4px 0px 2px 4px;
+      background-color: #e6e6e6;
+    }
+  </style>
+</head>
 
 <body>
-  <div class="header">
-    <p class="brand">colourSpy</p>
-  </div>
+<div class="header">
+  <p class="brand">colourSpy</p>
+</div>
 
-<div id="main">
-  <div class="card">
+<div id="main" ng-controller="MainCtrl" ng-show="colours">
+  <div class="card" ng-repeat="colour in colours">
     <div class="card-content">
-      <span class="swatch" style="background-color: #28776a">&nbsp;</span>
+      <span class="swatch" style="background-color: {{colour.hex}}">&nbsp;</span>
     </div>
     <div class="card-footer">
-      #28776a
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-content">
-      <span class="swatch" style="background-color: #2047AE">&nbsp;</span>
-    </div>
-    <div class="card-footer">
-      #2047AE
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-content">
-      <span class="swatch" style="background-color: #5468FF">&nbsp;</span>
-    </div>
-    <div class="card-footer">
-      #5468FF
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-content">
-      <span class="swatch" style="background-color: #4A8813">&nbsp;</span>
-    </div>
-    <div class="card-footer">
-      #4A8813
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-content">
-      <span class="swatch" style="background-color: #EC843F">&nbsp;</span>
-    </div>
-    <div class="card-footer">
-      #EC843F
+      {{colour.hex}}
     </div>
   </div>
 </div>
 </body>
+</html>
