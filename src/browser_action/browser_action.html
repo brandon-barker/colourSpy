@@ -10,7 +10,7 @@
     body {
       height: auto;
       max-height: 600px;
-      width: 350px;
+      width: 450px;
       font-family: Helvetica, Ubuntu, Arial, sans-serif;
       overflow-x: hidden;
       overflow-y: auto;
@@ -21,6 +21,7 @@
 
     #main {
       padding: 0px 8px;
+      margin-bottom: 14px;
     }
 
     h1 {
@@ -85,14 +86,15 @@
 </div>
 
 <div id="main" ng-controller="MainCtrl" ng-show="colours">
-  <div class="card" ng-repeat="colour in colours">
+  <div class="card" ng-repeat="colour in colours | orderBy:'hex'">
     <div class="card-content">
       <span class="swatch" style="background-color: {{colour.rgb}}">&nbsp;</span>
     </div>
     <div class="card-footer">
-      {{colour.rgb}}
+      <strong>rgb</strong>: {{colour.rgb}} / <strong>hex</strong>: {{colour.hex}} / <strong>hsl</strong>: {{colour.hsl}}
     </div>
   </div>
 </div>
+
 </body>
 </html>
