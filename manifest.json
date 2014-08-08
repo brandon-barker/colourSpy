@@ -26,8 +26,6 @@
     "clipboardWrite",
     "contextMenus",
     "tabs",
-    "http://*/*",
-    "https://*/*",
-    "*://*"
+    "*://*/*"
   ]
 }

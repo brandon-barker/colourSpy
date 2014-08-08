@@ -1,19 +1,31 @@
 function getColours() {
-  var colours = [];
+  var colours = {};
+  var properties = ['background-color', 'color'];
   var nodes = document.querySelectorAll('*');
 
   $(nodes).each(function (key, node) {
-    var bgColour = window.getComputedStyle(node)['background-color'];
+    $(properties).each(function (i, property) {
+      var colour = window.getComputedStyle(node)[property];
 
-    if (bgColour != 'rgb(255,255,255)' && bgColour != 'rgba(0, 0, 0, 0)') {
-      colours.push({
-        rgb: bgColour
-      });
-    }
+      if (colour != 'rgb(255, 255, 255)' && colour != 'rgba(0, 0, 0, 0)' && colour != 'rgb(0, 0, 0)') {
+        colours[colour] = colour;
+//        colours.push({
+//          rgb: colour
+//        });
+      }
+    });
   });
 
-  if (colours.length > 0) {
-    chrome.runtime.sendMessage({type: 'colours', data: colours});
+  var distinctColours = [];
+
+  Object.getOwnPropertyNames(colours).forEach(function (val) {
+    distinctColours.push({
+      rgb: val
+    })
+  });
+
+  if (distinctColours.length > 0) {
+    chrome.runtime.sendMessage({type: 'colours', data: distinctColours});
   }
 }
 
