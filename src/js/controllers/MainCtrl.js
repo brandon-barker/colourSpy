@@ -1,20 +1,14 @@
-function MainCtrl ($scope) {
-//  $scope.colours = [];
-  $scope.colours = [
-    {
-      hex: '#28776a'
-    },
-    {
-      hex: '#2047AE'
-    },
-    {
-      hex: '#5468FF'
-    },
-    {
-      hex: '#4A8813'
-    },
-    {
-      hex: '#EC843F'
-    }
-  ];
+function MainCtrl($scope, $log) {
+  $scope.colours = [];
+
+  $scope.init = function () {
+    chrome.runtime.onMessage.addListener(function (response) {
+      if (response.type == 'colours') {
+        $scope.colours = response.data;
+        $scope.$apply();
+      }
+    });
+  };
+
+  $scope.init();
 }

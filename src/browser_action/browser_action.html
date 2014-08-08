@@ -5,7 +5,7 @@
   <script type="text/javascript" src="../../js/angular/angular.min.js"></script>
   <script type="text/javascript" src="../js/controllers/MainCtrl.js"></script>
   <script type="text/javascript" src="../js/app.js"></script>
-  <script type="text/javascript" src="../js/main.js"></script>
+  <script type="text/javascript" src="../js/popup.js"></script>
   <style type="text/css">
     body {
       height: auto;
@@ -87,10 +87,10 @@
 <div id="main" ng-controller="MainCtrl" ng-show="colours">
   <div class="card" ng-repeat="colour in colours">
     <div class="card-content">
-      <span class="swatch" style="background-color: {{colour.hex}}">&nbsp;</span>
+      <span class="swatch" style="background-color: {{colour.rgb}}">&nbsp;</span>
     </div>
     <div class="card-footer">
-      {{colour.hex}}
+      {{colour.rgb}}
     </div>
   </div>
 </div>
