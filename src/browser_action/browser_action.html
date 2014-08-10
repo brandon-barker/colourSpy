@@ -6,6 +6,7 @@
   <script type="text/javascript" src="../js/controllers/MainCtrl.js"></script>
   <script type="text/javascript" src="../js/app.js"></script>
   <script type="text/javascript" src="../js/popup.js"></script>
+  <script type="text/javascript" src="/js/color/color-0.7.1.min.js"></script>
   <style type="text/css">
     body {
       height: auto;
@@ -41,7 +42,7 @@
       border-radius: 2px;
       background-color: #fff;
       width: 99%;
-      height: 80px;
+      height: 90px;
       display: inline-block;
       margin-top: 12px;
     }
@@ -52,7 +53,7 @@
 
     .card-content > .swatch {
       min-width: inherit;
-      min-height: 45px;
+      min-height: 55px;
       display: inline-block;
     }
 
@@ -88,13 +89,15 @@
 <div id="main" ng-controller="MainCtrl" ng-show="colours">
   <div class="card" ng-repeat="colour in colours | orderBy:'hex'">
     <div class="card-content">
-      <span class="swatch" style="background-color: {{colour.rgb}}">&nbsp;</span>
+      <span class="swatch" style="background-color: {{colour.rgb}}; border-bottom: 5px solid {{colour.borderColour}}">&nbsp;</span>
     </div>
     <div class="card-footer">
       <strong>rgb</strong>: {{colour.rgb}} / <strong>hex</strong>: {{colour.hex}} / <strong>hsl</strong>: {{colour.hsl}}
     </div>
   </div>
 </div>
+
+<div style="text-align: center"><img src="../../icons/icon64.png" alt="colourSpy" /></div>
 
 </body>
 </html>
