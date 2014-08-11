@@ -7,11 +7,15 @@ colourSpy is a handy Chrome extension to quickly find and preview colours used o
 
 It displays them all in a list of swatches where you can easily copy the corresponding RGB, HEX or HSL values for use in your IDE of choice.
 
-#### Screenshots
+## Screenshots
 
 ![colourSpy](http://i.imgur.com/RrjmArT.png)
 ![colourSpy](http://i.imgur.com/3E6Z47t.png)
 ![colourSpy](http://i.imgur.com/C9M7j8b.png)
+
+## Development
+
+Coming soon...
 
 ## Credit
 
