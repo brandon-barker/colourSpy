@@ -7,11 +7,8 @@ function getColours() {
     $(properties).each(function (i, property) {
       var colour = window.getComputedStyle(node)[property];
 
-      if (colour != 'rgb(255, 255, 255)' && colour != 'rgba(0, 0, 0, 0)' && colour != 'rgb(0, 0, 0)') {
+      if (colour != 'rgb(255, 255, 255)' && colour != 'rgb(0, 0, 0)' && colour.indexOf('rgba') === -1) {
         colours[colour] = colour;
-//        colours.push({
-//          rgb: colour
-//        });
       }
     });
   });
