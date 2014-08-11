@@ -1,0 +1,70 @@
+body {
+    height: auto;
+    max-height: 600px;
+    width: 450px;
+    font-family: Helvetica, Ubuntu, Arial, sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0px 0px 12px 0px;
+    padding: 0;
+    background-color: #eeeeee;
+}
+
+#main {
+    padding: 0px 8px;
+    margin-bottom: 14px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.brand {
+    font-size: 1.05em;
+    font-weight: bold;
+    margin: 2px 0px 0px 6px;
+    color: #5d6063;
+}
+
+.card {
+    border: 1px solid #c4c7ca;
+    border-bottom: 2px solid #a2a5a8;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 99%;
+    height: 90px;
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.card-content {
+    padding: 4px;
+}
+
+.card-content > .swatch {
+    min-width: inherit;
+    min-height: 55px;
+    display: inline-block;
+}
+
+.card-content > .swatch {
+    content: "";
+    width: 100%;
+    height: 100%;
+}
+
+.card-footer {
+    padding: 6px 4px;
+    font-size: 0.75em;
+    color: #5c5c5c;
+    font-weight: bold;
+}
+
+.header {
+    height: 25px;
+    width: 100%;
+    min-width: 100%;
+    border-bottom: 1px solid #c4c7ca;
+    padding: 4px 0px 2px 4px;
+    background-color: #e6e6e6;
+}

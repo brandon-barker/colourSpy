@@ -16,11 +16,12 @@ function getColours() {
   var distinctColours = [];
 
   Object.getOwnPropertyNames(colours).forEach(function (val) {
+    var colour = Color(val);
 
     distinctColours.push({
-      rgb: Color(val).rgbString(),
-      hex: Color(val).hexString(),
-      hsl: Color(val).hslString()
+      rgb: colour.rgbString(),
+      hex: colour.hexString(),
+      hsl: colour.hslString()
     })
   });
 
