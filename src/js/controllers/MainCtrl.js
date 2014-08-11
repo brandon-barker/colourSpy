@@ -1,5 +1,6 @@
 function MainCtrl($scope, $log) {
   $scope.colours = [];
+  $scope.mode = 'hex';
 
   $scope.init = function () {
     chrome.runtime.onMessage.addListener(function (response) {
