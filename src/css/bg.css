@@ -31,7 +31,7 @@ h1 {
     border-radius: 2px;
     background-color: #fff;
     width: 99%;
-    height: 90px;
+    height: 100px;
     display: inline-block;
     margin-top: 12px;
 }
@@ -53,11 +53,20 @@ h1 {
 }
 
 .card-footer {
-    padding: 4px;
-    font-size: 0.8em;
-    line-height: 1.1em;
-    color: #5c5c5c;
+    padding: 6px;
+}
+
+.card-footer div>h4 {
+    font-size: 12px;
+    margin: 0;
     font-weight: bold;
+    color: #4a4a4a;
+}
+
+.card-footer div>h5 {
+    font-size: 9px;
+    margin: 0;
+    color: #5d5d5d;
 }
 
 .header {

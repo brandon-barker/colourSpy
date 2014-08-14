@@ -8,7 +8,7 @@ function MainCtrl($scope, $log) {
         $scope.colours = response.data;
 
         angular.forEach($scope.colours, function (colour) {
-          colour.borderColour = Color(colour.hex).darken(0.05).hexString();
+          colour.borderColour = Color(colour.hex).darken(0.15).hexString();
         });
 
         $scope.$apply();

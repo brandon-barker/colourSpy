@@ -27,12 +27,21 @@
 
       <div class="card" ng-repeat="colour in colours | orderBy:'hex'">
         <div class="card-content">
-          <span class="swatch" style="background-color: {{colour.rgb}}; border-bottom: 5px solid {{colour.borderColour}}">&nbsp;</span>
+          <span class="swatch" style="background-color: {{colour.rgb}}; border-bottom: 6px solid {{colour.borderColour}}">&nbsp;</span>
         </div>
         <div class="card-footer">
-          <span ng-show="mode === 'rgb'">{{colour.rgb}}</span>
-          <span ng-show="mode === 'hex'">{{colour.hex}}</span>
-          <span ng-show="mode === 'hsl'">{{colour.hsl}}</span>
+          <div ng-show="mode === 'rgb'">
+            <h4>{{colour.rgb}}</h4>
+            <h5>RGB</h5>
+          </div>
+          <div ng-show="mode === 'hex'">
+            <h4>{{colour.hex}}</h4>
+            <h5>HEX</h5>
+          </div>
+          <div ng-show="mode === 'hsl'">
+            <h4>{{colour.hsl}}</h4>
+            <h5>HSL</h5>
+          </div>
         </div>
       </div>
     </div>
