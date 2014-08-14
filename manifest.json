@@ -1,6 +1,6 @@
 {
   "name": "colourSpy",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "manifest_version": 2,
   "description": "Easily view CSS colours used on a website.",
   "icons": {
