@@ -25,5 +25,5 @@ Supported export formats at the moment are:
 
 Made possible with the help of these awesome libraries
 
-[Color](https://github.com/harthur/color) by @harthur
-[FileSaver.js](https://github.com/eligrey/FileSaver.js) by @eligrey
+* [Color](https://github.com/harthur/color) by @harthur
+* [FileSaver.js](https://github.com/eligrey/FileSaver.js) by @eligrey
