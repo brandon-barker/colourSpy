@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../css/bg.css"/>
     <link rel="stylesheet" href="../css/csp.css"/>
+    <link rel="stylesheet" href="/css/font-awesome.min.css" />
   </head>
 
   <body ng-controller="MainCtrl">
@@ -23,6 +24,20 @@
         <label class="btn btn-default btn-sm" ng-class="{'active': mode == 'hsl'}" ng-click="mode = 'hsl'">
           <input type="radio" name="mode" id="hsl" value="hsl"> HSL
         </label>
+      </div>
+
+      <div class="btn-group btn-group-sm pull-right" style="margin-right: 4px;">
+        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+          <i class="fa fa-share-square-o fa-fw"></i> Export <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#" ng-click="export('css')">CSS</a></li>
+          <li><a href="#" ng-click="export('scss')">SCSS</a></li>
+          <li><a href="#" ng-click="export('less')">LESS</a></li>
+          <li class="divider"></li>
+          <li><a href="#" ng-click="export('plain')">Plain Text</a></li>
+          <li><a href="#" ng-click="export('json')">JSON</a></li>
+        </ul>
       </div>
 
       <div class="card" ng-repeat="colour in colours | orderBy:'hex'">
@@ -49,6 +64,8 @@
     <div style="text-align: center"><img src="../../icons/icon64.png" alt="colourSpy"/></div>
 
     <script type="text/javascript" src="../../js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/underscore/underscore-min.js"></script>
+    <script type="text/javascript" src="../../js/FileSaver.js"></script>
     <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../js/angular/angular.min.js"></script>
     <script type="text/javascript" src="../js/controllers/MainCtrl.js"></script>
