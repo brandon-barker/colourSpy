@@ -16,6 +16,10 @@ function MainCtrl($scope, $log) {
     });
   };
 
+  $scope.remove = function (colour) {
+    $scope.colours.splice($scope.colours.indexOf(colour), 1);
+  };
+
   $scope.export = function (type) {
     var filteredColours = _.pluck($scope.colours, $scope.mode);
     var content = '';

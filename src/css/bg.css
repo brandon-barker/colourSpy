@@ -34,6 +34,7 @@ h1 {
     height: 100px;
     display: inline-block;
     margin-top: 12px;
+    position: relative;
 }
 
 .card-content {
@@ -54,6 +55,9 @@ h1 {
 
 .card-footer {
     padding: 6px;
+    display: block;
+    position: absolute;
+    width: 100%;
 }
 
 .card-footer div>h4 {
@@ -76,4 +80,16 @@ h1 {
     border-bottom: 1px solid #c4c7ca;
     padding: 6px 0px 4px 4px;
     background-color: #e6e6e6;
+}
+
+.btn-remove {
+    color: #a3a3a3;
+    background-color: #F4F4F4;
+    border-color: #e6e6e6;
+}
+
+.btn-remove:hover, .btn-remove:focus, .btn-remove:active, .btn-remove.active, .open>.dropdown-toggle.btn-remove {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925;
 }

@@ -45,18 +45,24 @@
           <span class="swatch" style="background-color: {{colour.rgb}}; border-bottom: 6px solid {{colour.borderColour}}">&nbsp;</span>
         </div>
         <div class="card-footer">
-          <div ng-show="mode === 'rgb'">
-            <h4>{{colour.rgb}}</h4>
-            <h5>RGB</h5>
-          </div>
-          <div ng-show="mode === 'hex'">
-            <h4>{{colour.hex}}</h4>
-            <h5>HEX</h5>
-          </div>
-          <div ng-show="mode === 'hsl'">
-            <h4>{{colour.hsl}}</h4>
-            <h5>HSL</h5>
-          </div>
+            <div class="row">
+              <div class="col-lg-4 pull-left" ng-show="mode === 'rgb'">
+                <h4>{{colour.rgb}}</h4>
+                <h5>RGB</h5>
+              </div>
+              <div class="col-lg-4 pull-left" ng-show="mode === 'hex'">
+                <h4>{{colour.hex}}</h4>
+                <h5>HEX</h5>
+              </div>
+              <div class="col-lg-4 pull-left" ng-show="mode === 'hsl'">
+                <h4>{{colour.hsl}}</h4>
+                <h5>HSL</h5>
+              </div>
+
+              <div class="col-lg-2 pull-right">
+                <button class="btn btn-remove btn-xs pull-right" title="Remove this swatch" ng-click="remove(colour)"><i class="fa fa-trash-o fa-fw"></i></button>
+              </div>
+            </div>
         </div>
       </div>
     </div>
