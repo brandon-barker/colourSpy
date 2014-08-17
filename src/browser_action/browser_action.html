@@ -46,17 +46,9 @@
         </div>
         <div class="card-footer">
             <div class="row">
-              <div class="col-lg-4 pull-left" ng-show="mode === 'rgb'">
-                <h4>{{colour.rgb}}</h4>
-                <h5>RGB</h5>
-              </div>
-              <div class="col-lg-4 pull-left" ng-show="mode === 'hex'">
-                <h4>{{colour.hex}}</h4>
-                <h5>HEX</h5>
-              </div>
-              <div class="col-lg-4 pull-left" ng-show="mode === 'hsl'">
-                <h4>{{colour.hsl}}</h4>
-                <h5>HSL</h5>
+              <div class="col-lg-3 pull-left">
+                <h4>{{colour[mode]}}</h4>
+                <h5>{{mode}}</h5>
               </div>
 
               <div class="col-lg-2 pull-right">

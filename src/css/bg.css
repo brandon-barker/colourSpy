@@ -71,6 +71,7 @@ h1 {
     font-size: 9px;
     margin: 0;
     color: #5d5d5d;
+    text-transform: uppercase;
 }
 
 .header {
